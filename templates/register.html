@@ -1,0 +1,23 @@
+{%extend "layout.html"%}
+{%blockmain%}
+<form action="{{url_for('register')}}" method="post" autocomplete="off">
+    <div class="mb-4">
+     <label for= "username" class="form-label">Nombre de Usuario</label> 
+     <input type="username" class="form-control" name="username">
+    </div>
+    <div class="mb-4">
+      <label for= "password" class="form-label">Contraseña</label> 
+     <input type="password" class="form-control" name="password">
+    </div>
+    <div class="mb-4">
+      <label for= "password" class="form-label">Confirmar Contraseña</label> 
+     <input type="password" class="form-control" name="confirmation">
+    </div>
+   <div class="d-grid">
+      <button type="submit" class="btn btn-primary">Registrate</button>
+    </div>
+    <div class="my-3">
+      <span>¿Ya tienes una cuenta? <a href="/login">Iniciar sesion</a></span>
+    </div>
+  </form>
+{%endblock%}
